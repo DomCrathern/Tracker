@@ -4,4 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+	<TextView
+		android:text="Current Status"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:minWidth="25px"
+		android:minHeight="25px"
+		android:id="@+id/infoTextView" />
+	<Button
+		android:text="Start"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/infoTextView"
+		android:id="@+id/startPauseButton"
+	    android:enabled="false"/>
+	<Button
+		android:text="Finish"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_below="@id/infoTextView"
+		android:layout_toRightOf="@id/startPauseButton"
+		android:id="@+id/finishButton" 
+	    android:visibility="invisible"/>
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/finishButton">
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView
+				android:text=""
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:layout_below="@id/finishButton"
+				android:id="@+id/locationTextView" />
+		</LinearLayout>
+	</ScrollView>
 </RelativeLayout>
